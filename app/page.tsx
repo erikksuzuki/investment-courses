@@ -92,10 +92,12 @@ export default function Home() {
             tips, jargon, and noise?
           </li>
           <li className="tracking-[-.01em]">
-            We simplify stock market education for YOU – whether you're a
+            We simplify stock market education for YOU – whether you&apos;re a
             complete beginner or someone looking to sharpen your edge.
           </li>
-          <li className="tracking-[-.01em]">When you Join Now, you’ll get:</li>
+          <li className="tracking-[-.01em]">
+            When you Join Now, you&apos;ll get:
+          </li>
           <li className="tracking-[-.01em]">
             Free Daily Market Insights tailored to Indian stocks
           </li>
@@ -115,10 +117,10 @@ export default function Home() {
             No fees. No catch. Just pure, powerful stock market knowledge.
           </li>
           <li className="tracking-[-.01em]">
-            Don't miss your chance to level up your financial game.
+            Don&apos;t miss your chance to level up your financial game.
           </li>
           <li className="tracking-[-.01em]">
-            [Join Now] – It’s free, forever.
+            [Join Now] – It&apos;s free, forever.
           </li>
         </ol>
 

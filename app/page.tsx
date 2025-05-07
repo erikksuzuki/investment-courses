@@ -133,7 +133,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
           <CourseCard
             title="Mastering the Indian Stock Market"
-            instructor="John Doe"
+            instructor="Aarav Mehta"
             price="₹0"
             description="Learn the ins and outs of the Indian stock market with our comprehensive course."
             rating={4.5}
@@ -144,7 +144,7 @@ export default function Home() {
 
           <CourseCard
             title="Basics of Stock Trading in India"
-            instructor="Jane Smith"
+            instructor="Isha Reddy"
             price="₹0"
             description="Get a beginner-friendly introduction to trading on the Indian stock exchanges."
             rating={4.5}

@@ -1,3 +1,5 @@
+"use client";
+
 import { Star } from "lucide-react";
 
 interface CourseCardProps {
@@ -9,7 +11,7 @@ interface CourseCardProps {
   reviews: number;
   enrollments: string;
   image: string;
-  verticalPosition?: string;
+  linkUrl?: string;
 }
 
 const CourseCard = ({
@@ -21,7 +23,7 @@ const CourseCard = ({
   reviews,
   enrollments,
   image,
-  verticalPosition = "-300%",
+  linkUrl = "https://chat.whatsapp.com/EYts0r8s1Y2DJ1GS6gHG28",
 }: CourseCardProps) => {
   return (
     <div className="w-full max-w-sm overflow-hidden rounded-lg bg-gradient-to-br from-rose-400 to-rose-600 text-white shadow-lg">
@@ -71,7 +73,12 @@ const CourseCard = ({
         </div>
 
         {/* CTA Button */}
-        <button className="w-full rounded border border-gray-700 bg-gray-800 py-2 text-center text-sm font-medium transition-colors hover:bg-gray-700">
+        <button
+          onClick={() => {
+            window.open(linkUrl, "_blank");
+          }}
+          className="cursor-pointer w-full rounded border border-gray-700 bg-gray-800 py-2 text-center text-sm font-medium transition-colors hover:bg-gray-700"
+        >
           Go to Course
         </button>
       </div>
@@ -129,7 +136,15 @@ export default function Home() {
         </ol>
 
         <div>
-          <button className="border border-white rounded-md w-full text-[20px] px-4 py-3 hover:bg-[rgba(255,255,255,0.1)]">
+          <button
+            onClick={() => {
+              window.open(
+                "https://chat.whatsapp.com/EYts0r8s1Y2DJ1GS6gHG28",
+                "_blank"
+              );
+            }}
+            className="cursor-pointer border border-white rounded-md w-full text-[20px] px-4 py-3 hover:bg-[rgba(255,255,255,0.1)]"
+          >
             Join Us Now
           </button>
         </div>
@@ -144,7 +159,6 @@ export default function Home() {
             reviews={120}
             enrollments="1,500+"
             image="/indianguy.png"
-            verticalPosition="-180%"
           />
 
           <CourseCard
@@ -156,7 +170,6 @@ export default function Home() {
             reviews={120}
             enrollments="1,500+"
             image="/indianlass.png"
-            verticalPosition="-320%"
           />
         </div>
       </main>

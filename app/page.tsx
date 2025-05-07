@@ -26,7 +26,7 @@ const CourseCard = ({
   linkUrl = "https://chat.whatsapp.com/EYts0r8s1Y2DJ1GS6gHG28",
 }: CourseCardProps) => {
   return (
-    <div className="w-full max-w-sm overflow-hidden rounded-lg bg-gradient-to-br from-rose-400 to-rose-600 text-white shadow-lg">
+    <div className="flex flex-col w-full max-w-sm overflow-hidden rounded-lg bg-gradient-to-br from-rose-400 to-rose-600 text-white shadow-lg">
       {/* Course label */}
       <div className="p-4 pb-0">
         <span className="text-xs font-medium uppercase tracking-wider opacity-90">
@@ -47,31 +47,32 @@ const CourseCard = ({
       </div>
 
       {/* Dark section with details */}
-      <div className="bg-gray-900 p-4">
-        <div className="mb-2 text-lg font-bold">{price}</div>
-        <div className="mb-3 text-sm">{description}</div>
+      <div className="flex flex-col bg-gray-900 p-4 flex-1">
+        <div className="flex-1">
+          <div className="mb-2 text-lg font-bold">{price}</div>
+          <div className="mb-3 text-sm">{description}</div>
 
-        {/* Rating */}
-        <div className="mb-2 flex items-center">
-          {[...Array(5)].map((_, i) => (
-            <Star
-              key={i}
-              size={16}
-              className={`mr-1 ${
-                i < Math.floor(rating)
-                  ? "fill-yellow-400 text-yellow-400"
-                  : "text-gray-400"
-              }`}
-            />
-          ))}
-          <span className="ml-1 text-sm">({reviews})</span>
+          {/* Rating */}
+          <div className="mb-2 flex items-center">
+            {[...Array(5)].map((_, i) => (
+              <Star
+                key={i}
+                size={16}
+                className={`mr-1 ${
+                  i < Math.floor(rating)
+                    ? "fill-yellow-400 text-yellow-400"
+                    : "text-gray-400"
+                }`}
+              />
+            ))}
+            <span className="ml-1 text-sm">({reviews})</span>
+          </div>
+
+          {/* Enrollments */}
+          <div className="mb-4 text-xs text-gray-400">
+            {enrollments} Enrollments
+          </div>
         </div>
-
-        {/* Enrollments */}
-        <div className="mb-4 text-xs text-gray-400">
-          {enrollments} Enrollments
-        </div>
-
         {/* CTA Button */}
         <button
           onClick={() => {
@@ -98,6 +99,30 @@ export default function Home() {
             Join thousands of smart investors learning how to grow their wealth
             with expert guidance, market insights, and proven strategies.
           </h2>
+
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-4 mb-10">
+            <CourseCard
+              title="Mastering the Indian Stock Market"
+              instructor="Aarav Mehta"
+              price="₹0"
+              description="Learn the ins and outs of the Indian stock market with our comprehensive course."
+              rating={4.5}
+              reviews={120}
+              enrollments="1,500+"
+              image="/indianguy.png"
+            />
+
+            <CourseCard
+              title="Basics of Stock Trading in India"
+              instructor="Isha Reddy"
+              price="₹0"
+              description="Get a beginner-friendly introduction to trading on the Indian stock exchanges."
+              rating={4.5}
+              reviews={120}
+              enrollments="1,500+"
+              image="/indianlass.png"
+            />
+          </div>
           <li className="tracking-[-.01em]">
             Tired of guessing where the market is headed? Confused by endless
             tips, jargon, and noise?
@@ -147,30 +172,6 @@ export default function Home() {
           >
             Join Us Now
           </button>
-        </div>
-
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
-          <CourseCard
-            title="Mastering the Indian Stock Market"
-            instructor="Aarav Mehta"
-            price="₹0"
-            description="Learn the ins and outs of the Indian stock market with our comprehensive course."
-            rating={4.5}
-            reviews={120}
-            enrollments="1,500+"
-            image="/indianguy.png"
-          />
-
-          <CourseCard
-            title="Basics of Stock Trading in India"
-            instructor="Isha Reddy"
-            price="₹0"
-            description="Get a beginner-friendly introduction to trading on the Indian stock exchanges."
-            rating={4.5}
-            reviews={120}
-            enrollments="1,500+"
-            image="/indianlass.png"
-          />
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>

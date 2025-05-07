@@ -33,8 +33,8 @@ const CourseCard = ({
       </div>
 
       {/* Course title and instructor */}
-      <div className="px-4 pb-4 min-h-[160px] relative overflow-hidden">
-        <img src={image} className="w-[120px] absolute right-0 top-[30px]" />
+      <div className="px-4 pb-4 min-h-[200px] relative overflow-hidden">
+        <img src={image} className="w-[170px] absolute right-0 top-[40px]" />
         <h2 className="text-2xl font-bold leading-tight">{title}</h2>
         <div className="mt-4 flex items-center">
           <span className="text-opacity-90">—</span>

@@ -122,6 +122,12 @@ export default function Home() {
           </li>
         </ol>
 
+        <div>
+          <button className="border border-white rounded-md w-full text-[20px] px-4 py-3 hover:bg-[rgba(255,255,255,0.1)]">
+            Join Us Now
+          </button>
+        </div>
+
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
           <CourseCard
             title="Mastering the Indian Stock Market"

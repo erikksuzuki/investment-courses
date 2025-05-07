@@ -80,10 +80,10 @@ export default function Home() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <ol className="list-inside list-decimal text-left font-[family-name:var(--font-geist-mono)]">
-          <h1 className="md:text-[32px] text-[14px] font-bold">
+          <h1 className="md:text-[32px] text-[32px] font-bold leading-[1.1] mb-3">
             Unlock the Secrets of the Indian Stock Market – Absolutely FREE!
           </h1>
-          <h2 className="md:text-[16px] text-[10px] font-semibold mb-10">
+          <h2 className="md:text-[16px] text-[16px] font-semibold mb-10">
             Join thousands of smart investors learning how to grow their wealth
             with expert guidance, market insights, and proven strategies.
           </h2>

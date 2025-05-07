@@ -8,7 +8,8 @@ interface CourseCardProps {
   rating: number;
   reviews: number;
   enrollments: string;
-  image?: string;
+  image: string;
+  verticalPosition?: string;
 }
 
 const CourseCard = ({
@@ -19,6 +20,8 @@ const CourseCard = ({
   rating,
   reviews,
   enrollments,
+  image,
+  verticalPosition = "-300%",
 }: CourseCardProps) => {
   return (
     <div className="w-full max-w-sm overflow-hidden rounded-lg bg-gradient-to-br from-rose-400 to-rose-600 text-white shadow-lg">
@@ -30,7 +33,8 @@ const CourseCard = ({
       </div>
 
       {/* Course title and instructor */}
-      <div className="px-4 pb-4">
+      <div className="px-4 pb-4 min-h-[160px] relative overflow-hidden">
+        <img src={image} className="w-[120px] absolute right-0 top-[30px]" />
         <h2 className="text-2xl font-bold leading-tight">{title}</h2>
         <div className="mt-4 flex items-center">
           <span className="text-opacity-90">—</span>
@@ -139,7 +143,8 @@ export default function Home() {
             rating={4.5}
             reviews={120}
             enrollments="1,500+"
-            image="/path/to/image.jpg"
+            image="/indianguy.png"
+            verticalPosition="-180%"
           />
 
           <CourseCard
@@ -150,7 +155,8 @@ export default function Home() {
             rating={4.5}
             reviews={120}
             enrollments="1,500+"
-            image="/path/to/image.jpg"
+            image="/indianlass.png"
+            verticalPosition="-320%"
           />
         </div>
       </main>
